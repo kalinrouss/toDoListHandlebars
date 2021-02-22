@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+}
+
+#main {
+    display: block;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    border: 2px solid black;
+    background-color: burlywood;
+}
+
+#inputValue {
+    width: 400px;
+}
