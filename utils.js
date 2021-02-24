@@ -13,7 +13,7 @@ function setItem(key, value) {
 
 function print() {
     const toDoList = getItem('tasks');
-    const source = getElementById('source').innerHTML;
+    const source = document.getElementById('source').innerHTML;
     const content = document.getElementById('tasksContainer');
     const template = Handlebars.compile(source);
     const html = template(toDoList);
