@@ -22,12 +22,30 @@
             <button id="submitButton">Add</button>
         </form>
 
-        <div id="dataContainer"></div>
+        <div id="tasksContainer"></div>
 
         <button id="clearButton">Clear</button>
     </div>
 
-    <div id='tasksContainer'></div>
+    <script id="source" type="text/x-handlebars-template">
+        {{#if this}}
+        <ul>
+            {{#each this}}
+            <li data-id="{{this.version}}">
+                {{#if this.checked}}
+                <p class="checked">{{this.title}}</p>
+                {{else}}
+                <p>{{this.title}}</p>
+                {{/if}}
+                <i></i>
+            </li>
+            <hr>
+            {{/each}}
+        </ul>
+        {{else}}
+        <h2 id="informationMessage">The list is empty</h2>
+        {{/if}}
+    </script>
 
     <script src="./utils.js"></script>
     <script src="./TaskService.js"></script>
